@@ -213,6 +213,11 @@ resource "aws_iam_role_policy_attachment" "docker_machine" {
   policy_arn = "${aws_iam_policy.docker_machine.arn}"
 }
 
+resource "aws_iam_role_policy_attachment" "srole_for_ssm-attach" {
+  role       = "${aws_iam_role.instance.name}"
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM"
+}
+
 ################################################################################
 ### docker machine policy to access the shared cache
 ################################################################################
