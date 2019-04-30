@@ -217,12 +217,6 @@ variable "cache_shared" {
   default     = "false"
 }
 
-variable "gitlab_runner_version" {
-  description = "Version for the gitlab runner."
-  type        = "string"
-  default     = "11.8.0"
-}
-
 variable "enable_cloudwatch_logging" {
   description = "Enable or disable the CloudWatch logging."
   default     = 1
