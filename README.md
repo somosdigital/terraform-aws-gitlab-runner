@@ -128,7 +128,6 @@ module "gitlab-runner" {
 | docker_machine_version | Version of docker-machine. | string | `0.16.1` | no |
 | enable_cloudwatch_logging | Enable or disable the CloudWatch logging. | string | `1` | no |
 | environment | A name that identifies the environment, will used as prefix and for tagging. | string | - | yes |
-| gitlab_runner_version | Version for the gitlab runner. | string | `11.8.0` | no |
 | instance_role_json | Instance role json for the runner agent ec2 instance to override the default. | string | `` | no |
 | instance_role_runner_json | Instance role json for the docker machine runners to override the default. | string | `` | no |
 | instance_type | Instance type used for the gitlab-runner. | string | `t2.micro` | no |

@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+- Changed: Default runner agent is always the latest in the repository
 
 ## [2.2.1] - 2019-03-19
 - Bugfix: Add tags to spot instances #39
