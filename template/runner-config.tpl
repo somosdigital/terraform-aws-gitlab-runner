@@ -6,7 +6,7 @@ check_interval = 0
   url = "${gitlab_url}"
   token = "${runners_token}"
   executor = "${runners_executor}"
-  environment = ["DOCKER_TLS_CERTDIR="]
+  environment = ["DOCKER_TLS_CERTDIR='/certs'"]
   pre_build_script = "${runners_pre_build_script}"
   post_build_script = "${runners_post_build_script}"
   pre_clone_script = "${runners_pre_clone_script}"
@@ -18,7 +18,7 @@ check_interval = 0
     image = "${runners_image}"
     privileged = ${runners_privilled}
     disable_cache = false
-    volumes = ["/cache"]
+    volumes = ["/certs/client", "/cache"]
     shm_size = 0
   [runners.cache]
     Type = "s3"
